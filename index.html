@@ -5,9 +5,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Movies</title>
     <link rel="stylesheet" href="main.css">
+    <style>
+        html, body {
+            margin: 0;
+            padding: 0;
+            overflow-x: hidden; 
+        }
+    </style>
 </head>
 <body>
-    <div class="bg-[url('pic/1735481025315.jpg')] bg-cover bg-no-repeat  bg-center overflow-x-hidden h-screen  ">
+    <div class="bg-[url('pic/1735481025315.jpg')] bg-cover bg-no-repeat bg-center overflow-x-hidden min-h-screen">
         
         <nav class="flex justify-between">
             <div class="logo text-3xl font-extrabold">
@@ -23,92 +30,71 @@
         <main class="flex">
             <!-- Left Section -->
             <div class="ls flex items-center justify-center w-1/2">
-              <img class="h-[100%] w-auto pt-13" src="pic/1735484907330.png" alt="img">
+                <img class="h-full w-auto " src="pic/1735484907330.png" alt="img">
             </div>
           
             <!-- Right Section -->
             <div class="rs flex flex-col items-center justify-center w-1/2 text-center">
-              <h1 class="text-orange-500 text-5xl font-bold mb-4">Welcome to AMV!</h1>
-              <p class="text-2xl mb-4 font-semibold">Watch and download trending anime shows.</p>
-              <button class="px-6 py-3 bg-orange-500 text-white rounded-lg hover:bg-orange-600 transition">
-                Stream Now
-              </button>
+                <h1 class="text-orange-500 text-5xl font-bold mb-4">Welcome to AMV!</h1>
+                <p class="text-2xl mb-4 font-semibold">Watch and download trending anime shows.</p>
+                <button class="px-6 py-3 bg-orange-500 text-white rounded-lg hover:bg-orange-600 transition">
+                    Stream Now
+                </button>
             </div>
-          </main>
+        </main>
 
-          <section class="h-screen">
-            <div class="bg-[url('pic/card-bg.jpg')] bg-cover bg-no-repeat  bg-center overflow-x-hidden h-screen">
-
-            <div class="text-center my-14">
-              <h1 class="text-orange-500 font-bold text-6xl">Anime List</h1>
-            </div>
-
-              <div class="cards grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8 max-w-7xl mx-auto p-4">
-                <!-- Card -->
-                <div class=" rounded-xl overflow-hidden  text-center text-2xl font-bold shadow-lg hover:scale-105 transition-all ease-in-out">
-                  <div class="h-96 w-full overflow-hidden rounded-t-lg">
-                    <img
-                      src="pic/Saitama Poster__ One Punch Man.jpeg"
-                      alt="img1"
-                      class="h-full w-full object-cover"
-                    />
-                  </div>
-                  <h1 class="p-4 text-black">Saitama</h1>
-                </div>
-              
-                <div class=" rounded-xl overflow-hidden text-center text-2xl font-bold shadow-lg hover:scale-105 transition-all ease-in-out">
-                  <div class="h-96 w-full overflow-hidden rounded-t-lg">
-                    <img
-                      src="pic/Persona 3 Reload _ Poster.jpeg"
-                      alt="img2"
-                      class="h-full w-full object-cover"
-                    />
-                  </div>
-                  <h1 class="p-4 text-black">Persona</h1>
+        <section class="min-h-screen">
+            <div class="bg-[url('pic/card-bg.jpg')] bg-cover bg-no-repeat bg-center min-h-screen">
+                <div class="text-center my-14">
+                    <h1 class="text-orange-500 font-bold text-6xl pt-9">Anime List</h1>
                 </div>
 
-                <div class=" rounded-xl overflow-hidden text-center text-2xl font-bold shadow-lg hover:scale-105 transition-all ease-in-out">
-                  <div class="h-96 w-full overflow-hidden rounded-t-lg">
-                    <img
-                      src="pic/Affiche métal DragonBall Z.jpeg"
-                      alt="img2"
-                      class="h-full w-full object-cover"
-                    />
-                  </div>
-                  <h1 class="p-4 text-black">DragonBall Z</h1>
-                </div>
-              
-              <div class=" rounded-xl overflow-hidden text-center text-2xl font-bold shadow-lg hover:scale-105 transition-all ease-in-out">
-                <div class="h-96 w-full overflow-hidden rounded-t-lg">
-                  <img
-                    src="pic/Death Note.jpeg"
-                    alt="img2"
-                    class="h-full w-full object-cover"
-                  />
-                </div>
-                <h1 class="p-4 text-black">Death Note</h1>
-              </div>
+                <div class="cards grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8 max-w-7xl mx-auto p-4">
+                    <!-- Card -->
+                    <div class="rounded-xl overflow-hidden text-center text-2xl font-bold shadow-lg hover:scale-105 transition-all ease-in-out">
+                        <div class="h-96 w-full overflow-hidden rounded-t-lg">
+                            <img src="pic/Saitama Poster__ One Punch Man.jpeg" alt="img1" class="h-full w-full object-cover" />
+                        </div>
+                        <h1 class="p-4 text-black">Saitama</h1>
+                    </div>
 
-              <div class=" rounded-xl overflow-hidden text-center text-2xl font-bold shadow-lg hover:scale-105 transition-all ease-in-out">
-                <div class="h-96 w-full overflow-hidden rounded-t-lg">
-                  <img
-                    src="pic/Windbreaker (Anime).jpeg" 
-                    class="h-full w-full object-cover"
-                  />
-                </div>
-                <h1 class="p-4 text-black">Wind Breaker</h1>
-              </div>
+                    <!-- Additional Cards -->
+                    <div class="rounded-xl overflow-hidden text-center text-2xl font-bold shadow-lg hover:scale-105 transition-all ease-in-out">
+                        <div class="h-96 w-full overflow-hidden rounded-t-lg">
+                            <img src="pic/Persona 3 Reload _ Poster.jpeg" alt="img2" class="h-full w-full object-cover" />
+                        </div>
+                        <h1 class="p-4 text-black">Persona</h1>
+                    </div>
 
-              <div class=" rounded-xl overflow-hidden text-center text-2xl font-bold shadow-lg hover:scale-105 transition-all ease-in-out">
-                <div class="h-96 w-full overflow-hidden rounded-t-lg">
-                  <img
-                    src="pic/Jutsu kaisen lover !!!!_ GATHER HER IN THE COMMENTS NOW !!!.jpeg" 
-                    class="h-full w-full object-cover"
-                  />
-                </div>
-                <h1 class="p-4 text-black">Ju Jutsu Kaisen</h1>
-              </div>
+                    <div class="rounded-xl overflow-hidden text-center text-2xl font-bold shadow-lg hover:scale-105 transition-all ease-in-out">
+                        <div class="h-96 w-full overflow-hidden rounded-t-lg">
+                            <img src="pic/Affiche métal DragonBall Z.jpeg" alt="img2" class="h-full w-full object-cover" />
+                        </div>
+                        <h1 class="p-4 text-black">DragonBall Z</h1>
+                    </div>
 
+                    <div class="rounded-xl overflow-hidden text-center text-2xl font-bold shadow-lg hover:scale-105 transition-all ease-in-out">
+                        <div class="h-96 w-full overflow-hidden rounded-t-lg">
+                            <img src="pic/Death Note.jpeg" alt="img2" class="h-full w-full object-cover" />
+                        </div>
+                        <h1 class="p-4 text-black">Death Note</h1>
+                    </div>
+
+                    <div class="rounded-xl overflow-hidden text-center text-2xl font-bold shadow-lg hover:scale-105 transition-all ease-in-out">
+                        <div class="h-96 w-full overflow-hidden rounded-t-lg">
+                            <img src="pic/Windbreaker (Anime).jpeg" class="h-full w-full object-cover" />
+                        </div>
+                        <h1 class="p-4 text-black">Wind Breaker</h1>
+                    </div>
+
+                    <div class="rounded-xl overflow-hidden text-center text-2xl font-bold shadow-lg hover:scale-105 transition-all ease-in-out">
+                        <div class="h-96 w-full overflow-hidden rounded-t-lg">
+                            <img src="pic/Jutsu kaisen lover !!!!_ GATHER HER IN THE COMMENTS NOW !!!.jpeg" class="h-full w-full object-cover" />
+                        </div>
+                        <h1 class="p-4 text-black">Ju Jutsu Kaisen</h1>
+                    </div>
+
+                    
               <div class=" rounded-xl overflow-hidden text-center text-2xl font-bold shadow-lg hover:scale-105 transition-all ease-in-out">
                 <div class="h-96 w-full overflow-hidden rounded-t-lg">
                   <img
@@ -170,36 +156,35 @@
               </div>
            
   
+                        <!--cards-->
+
+                    
+                </div>
 
 
+                <div class="flex justify-center items-center space-x-2 mt-6">
+                  <!-- Previous Button -->
+                  <button class="px-4 py-2 bg-gray-200 text-gray-600 rounded-md hover:bg-gray-300 transition">Previous</button>
+              
+                  
+                  <button class="px-4 py-2 bg-orange-500 text-white rounded-md font-bold">1</button>
+                  <button class="px-4 py-2 bg-gray-200 text-gray-600 rounded-md hover:bg-gray-300 transition">2</button>
+                  <button class="px-4 py-2 bg-gray-200 text-gray-600 rounded-md hover:bg-gray-300 transition">3</button>
+                  <button class="px-4 py-2 bg-gray-200 text-gray-600 rounded-md hover:bg-gray-300 transition">4</button>
+                  <button class="px-4 py-2 bg-gray-200 text-gray-600 rounded-md hover:bg-gray-300 transition">5</button>
+                  <button class="px-4 py-2 bg-gray-200 text-gray-600 rounded-md hover:bg-gray-300 transition">6</button>
+              
+                  <!-- Next Button -->
+                  <button class="px-4 py-2 bg-gray-200 text-gray-600 rounded-md hover:bg-gray-300 transition">Next</button>
+              </div>
+              
 
-
-
-              </div>  
-
-
-
-
+                
             </div>
-          </section>
-          
-          
+        </section>
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-      </div>
-      
-
+        
+    </div>
 </body>
 </html>
