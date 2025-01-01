@@ -2,6 +2,21 @@
 @tailwind components;
 @tailwind utilities;
 
+
+html, body {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    scroll-behavior: smooth; 
+   
+}
+
+#nav-links {
+    transition: all 0.3s ease-in-out;
+}
+
+
+
 @media(max-width: 1030px){
     #home{
         flex-direction: column-reverse;
@@ -10,3 +25,4 @@
         margin-top: 4.8rem;
     }
 }
+

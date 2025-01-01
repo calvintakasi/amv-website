@@ -5,33 +5,29 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Movies</title>
     <link rel="stylesheet" href="main.css">
-    <style>
-        html, body {
-            margin: 0;
-            padding: 0;
-            overflow-x: hidden;
-            scroll-behavior: smooth; 
-        }
-    </style>
 </head>
 <body>
-    <div class="bg-[url('pic/1735481025315.jpg')] bg-cover bg-no-repeat bg-center overflow-x-hidden min-h-screen">
+    <div class="bg-[url('img/1735481025315.jpg')] bg-cover bg-no-repeat bg-center overflow-x-hidden min-h-screen">
         
         <nav class="flex justify-between">
             <div class="logo text-3xl font-extrabold">
                 <h1 class="mx-20 pt-12 text-amber-950"><a href="#home">AMV</a></h1>
             </div>
-            <ul class="flex">
+            
+
+            <ul class="flex" id="nav-links">
                 <li class="mx-20 pt-12 font-semibold text-lg hover:scale-105 transition-all ease-in-out cursor-pointer hover:text-orange-500"><a href="#About">About</a></li>
                 <li class="mx-20 pt-12 font-semibold text-lg hover:scale-105 transition-all ease-in-out cursor-pointer hover:text-orange-500"><a href="#list">Anime List</a></li>
                 <li class="mx-20 pt-12 font-semibold text-lg hover:scale-105 transition-all ease-in-out cursor-pointer hover:text-orange-500"><a href="community">Community</a></li>
             </ul>
         </nav>
 
+
+
         <main class="flex" id="home">
             <!-- Left Section -->
             <div class="ls flex items-center justify-center w-1/2">
-                <img class="h-full w-auto " src="pic/1735484907330.png" alt="img">
+                <img class="h-full w-auto " src="img/1735484907330.png" alt="img">
             </div>
           
             <!-- Right Section -->
@@ -45,7 +41,7 @@
         </main>
 
         <section class="min-h-screen" id="list">
-            <div class="bg-[url('pic/card-bg.jpg')] bg-cover bg-no-repeat bg-center min-h-screen">
+            <div class="bg-[url('img/card-bg.jpg')] bg-cover bg-no-repeat bg-center min-h-screen">
                 <div class="text-center my-14">
                     <h1 class="text-orange-500 font-bold text-6xl pt-9">Anime List</h1>
                 </div>
@@ -55,7 +51,7 @@
                     <div class="rounded-xl overflow-hidden text-center text-2xl font-bold shadow-lg hover:scale-105 transition-all ease-in-out">
                        <a href="https://archive.org/details/onepunchmanchapters8595">
                       <div class="h-96 w-full overflow-hidden rounded-t-lg">
-                            <img src="pic/Saitama Poster__ One Punch Man.jpeg" alt="img1" class="h-full w-full object-cover" />
+                            <img src="img/Saitama Poster__ One Punch Man.jpeg" alt="img1" class="h-full w-full object-cover" />
                         </div>
                         <h1 class="p-4 text-black">One Punch Man</h1>
                       </a>
@@ -64,35 +60,35 @@
                     <!-- Additional Cards -->
                     <div class="rounded-xl overflow-hidden text-center text-2xl font-bold shadow-lg hover:scale-105 transition-all ease-in-out">
                         <div class="h-96 w-full overflow-hidden rounded-t-lg">
-                            <img src="pic/Persona 3 Reload _ Poster.jpeg" alt="img2" class="h-full w-full object-cover" />
+                            <img src="img/Persona 3 Reload _ Poster.jpeg" alt="img2" class="h-full w-full object-cover" />
                         </div>
                         <h1 class="p-4 text-black">Persona</h1>
                     </div>
 
                     <div class="rounded-xl overflow-hidden text-center text-2xl font-bold shadow-lg hover:scale-105 transition-all ease-in-out">
                         <div class="h-96 w-full overflow-hidden rounded-t-lg">
-                            <img src="pic/Affiche métal DragonBall Z.jpeg" alt="img2" class="h-full w-full object-cover" />
+                            <img src="img/Affiche métal DragonBall Z.jpeg" alt="img2" class="h-full w-full object-cover" />
                         </div>
                         <h1 class="p-4 text-black">DragonBall Z</h1>
                     </div>
 
                     <div class="rounded-xl overflow-hidden text-center text-2xl font-bold shadow-lg hover:scale-105 transition-all ease-in-out">
                         <div class="h-96 w-full overflow-hidden rounded-t-lg">
-                            <img src="pic/Death Note.jpeg" alt="img2" class="h-full w-full object-cover" />
+                            <img src="img/Death Note.jpeg" alt="img2" class="h-full w-full object-cover" />
                         </div>
                         <h1 class="p-4 text-black">Death Note</h1>
                     </div>
 
                     <div class="rounded-xl overflow-hidden text-center text-2xl font-bold shadow-lg hover:scale-105 transition-all ease-in-out">
                         <div class="h-96 w-full overflow-hidden rounded-t-lg">
-                            <img src="pic/Windbreaker (Anime).jpeg" class="h-full w-full object-cover" />
+                            <img src="img/Windbreaker (Anime).jpeg" class="h-full w-full object-cover" />
                         </div>
                         <h1 class="p-4 text-black">Wind Breaker</h1>
                     </div>
 
                     <div class="rounded-xl overflow-hidden text-center text-2xl font-bold shadow-lg hover:scale-105 transition-all ease-in-out">
                         <div class="h-96 w-full overflow-hidden rounded-t-lg">
-                            <img src="pic/Jutsu kaisen lover !!!!_ GATHER HER IN THE COMMENTS NOW !!!.jpeg" class="h-full w-full object-cover" />
+                            <img src="img/Jutsu kaisen lover !!!!_ GATHER HER IN THE COMMENTS NOW !!!.jpeg" class="h-full w-full object-cover" />
                         </div>
                         <h1 class="p-4 text-black">Ju Jutsu Kaisen</h1>
                     </div>
@@ -101,7 +97,7 @@
               <div class=" rounded-xl overflow-hidden text-center text-2xl font-bold shadow-lg hover:scale-105 transition-all ease-in-out">
                 <div class="h-96 w-full overflow-hidden rounded-t-lg">
                   <img
-                    src="pic/e76d204e-f9e5-490c-b80a-2ff4b242a5ca.jpeg" 
+                    src="img/e76d204e-f9e5-490c-b80a-2ff4b242a5ca.jpeg" 
                     class="h-full w-full object-cover"
                   />
                 </div>
@@ -111,7 +107,7 @@
               <div class=" rounded-xl overflow-hidden text-center text-2xl font-bold shadow-lg hover:scale-105 transition-all ease-in-out">
                 <div class="h-96 w-full overflow-hidden rounded-t-lg">
                   <img
-                    src="pic/Season 2 Key Visual 1 _ October 7 Premiere.jpeg" 
+                    src="img/Season 2 Key Visual 1 _ October 7 Premiere.jpeg" 
                     class="h-full w-full object-cover"
                   />
                 </div>
@@ -121,7 +117,7 @@
               <div class=" rounded-xl overflow-hidden text-center text-2xl font-bold shadow-lg hover:scale-105 transition-all ease-in-out">
                 <div class="h-96 w-full overflow-hidden rounded-t-lg">
                   <img
-                    src="pic/download.jpeg" 
+                    src="img/download.jpeg" 
                     class="h-full w-full object-cover"
                   />
                 </div>
@@ -131,7 +127,7 @@
               <div class=" rounded-xl overflow-hidden text-center text-2xl font-bold shadow-lg hover:scale-105 transition-all ease-in-out">
                 <div class="h-96 w-full overflow-hidden rounded-t-lg">
                   <img
-                    src="pic/TOKYO REVENGERS 2.jpeg" 
+                    src="img/TOKYO REVENGERS 2.jpeg" 
                     class="h-full w-full object-cover"
                   />
                 </div>
@@ -141,7 +137,7 @@
               <div class=" rounded-xl overflow-hidden text-center text-2xl font-bold shadow-lg hover:scale-105 transition-all ease-in-out">
                 <div class="h-96 w-full overflow-hidden rounded-t-lg">
                   <img
-                    src="pic/Kaguya-Sama _Love Is War_ Poster made by me.jpeg" 
+                    src="img/Kaguya-Sama _Love Is War_ Poster made by me.jpeg" 
                     class="h-full w-full object-cover"
                   />
                 </div>
@@ -151,7 +147,7 @@
               <div class=" rounded-xl overflow-hidden text-center text-2xl font-bold shadow-lg hover:scale-105 transition-all ease-in-out">
                 <div class="h-96 w-full overflow-hidden rounded-t-lg">
                   <img
-                    src="pic/download (1).jpeg" 
+                    src="img/download (1).jpeg" 
                     class="h-full w-full object-cover"
                   />
                 </div>
@@ -247,5 +243,8 @@
       
         
     </div>
+
+
+    <script src="script.js"></script>
 </body>
 </html>
