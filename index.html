@@ -8,25 +8,67 @@
 </head>
 <body>
     <div class="bg-[url('img/1735481025315.jpg')] bg-cover bg-no-repeat bg-center overflow-x-hidden min-h-screen">
-        
-        <nav class="flex justify-between">
-            <div class="logo text-3xl font-extrabold">
-                <h1 class="mx-20 pt-12 text-amber-950"><a href="#home">AMV</a></h1>
+      <nav class="relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div class="flex justify-between items-center h-24">
+            <div class="logo">
+              <h1 class="text-3xl font-extrabold text-amber-950">
+                <a href="#home">AMV</a>
+              </h1>
             </div>
-            
-
-            <ul class="flex" id="nav-links">
-                <li class="mx-20 pt-12 font-semibold text-lg hover:scale-105 transition-all ease-in-out cursor-pointer hover:text-orange-500"><a href="#About">About</a></li>
-                <li class="mx-20 pt-12 font-semibold text-lg hover:scale-105 transition-all ease-in-out cursor-pointer hover:text-orange-500"><a href="#list">Anime List</a></li>
-                <li class="mx-20 pt-12 font-semibold text-lg hover:scale-105 transition-all ease-in-out cursor-pointer hover:text-orange-500"><a href="community">Community</a></li>
+      
+            <!-- Desktop Navigation -->
+            <ul class="hidden md:flex space-x-24">
+              <li>
+                <a href="#About" class="font-semibold text-lg hover:scale-105 transition-all ease-in-out hover:text-orange-500">
+                  About
+                </a>
+              </li>
+              <li>
+                <a href="#list" class="font-semibold text-lg hover:scale-105 transition-all ease-in-out hover:text-orange-500">
+                  Anime List
+                </a>
+              </li>
+              <li>
+                <a href="#community" class="font-semibold text-lg hover:scale-105 transition-all ease-in-out hover:text-orange-500">
+                  Community
+                </a>
+              </li>
             </ul>
-        </nav>
+      
+            <!-- Mobile Menu Icon -->
+            <div class="md:hidden">
+              <button id="menuButton" class="p-2 rounded-md font-bold text-gray-700 hover:text-orange-500 focus:outline-none">
+                <i id="menuIcon" class="h-6 w-6">☰</i>
+                <i id="closeIcon" class="h-6 w-6 hidden">×</i>
+              </button>
+            </div>
+          </div>
+        </div>
+      
+        <!-- Mobile Navigation (Initially hidden) -->
+        <div id="mobileMenu" class="md:hidden absolute top-24 left-0 right-0 bg-white shadow-lg z-50 hidden">
+          <ul class="px-4 pt-2 pb-4 space-y-2">
+            <li>
+              <a href="#About" class="block px-4 py-2 text-lg font-semibold hover:text-orange-500">About</a>
+            </li>
+            <li>
+              <a href="#list" class="block px-4 py-2 text-lg font-semibold hover:text-orange-500">Anime List</a>
+            </li>
+            <li>
+              <a href="#community" class="block px-4 py-2 text-lg font-semibold hover:text-orange-500">Community</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+      
+      
 
 
 
         <main class="flex" id="home">
             <!-- Left Section -->
-            <div class="ls flex items-center justify-center w-1/2">
+            <div class="ls flex items-center justify-center w-1/2 ">
                 <img class="h-full w-auto " src="img/1735484907330.png" alt="img">
             </div>
           
@@ -34,8 +76,8 @@
             <div class="rs flex flex-col items-center justify-center w-1/2 text-center">
                 <h1 class="text-orange-500 text-5xl font-bold mb-4">Welcome to AMV!</h1>
                 <p class="text-2xl mb-4 font-semibold">Watch and download trending anime shows.</p>
-                <button class="px-6 py-3 bg-orange-500 text-white rounded-lg hover:bg-orange-600 transition">
-                    Stream Now
+                <button class="px-6 py-3 bg-orange-500 text-white rounded-lg hover:bg-orange-600 transition" >
+                    <a href="#list">Watch Now</a>
                 </button>
             </div>
         </main>

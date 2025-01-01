@@ -8,11 +8,6 @@ html, body {
     padding: 0;
     overflow-x: hidden;
     scroll-behavior: smooth; 
-   
-}
-
-#nav-links {
-    transition: all 0.3s ease-in-out;
 }
 
 
@@ -26,3 +21,10 @@ html, body {
     }
 }
 
+@media (max-width: 768px) {
+
+
+    .ls{
+        width: 90%;
+    }
+}
