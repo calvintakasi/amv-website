@@ -9,7 +9,8 @@
         html, body {
             margin: 0;
             padding: 0;
-            overflow-x: hidden; 
+            overflow-x: hidden;
+            scroll-behavior: smooth; 
         }
     </style>
 </head>
@@ -18,16 +19,16 @@
         
         <nav class="flex justify-between">
             <div class="logo text-3xl font-extrabold">
-                <h1 class="mx-20 pt-12 text-amber-950">AMV</h1>
+                <h1 class="mx-20 pt-12 text-amber-950"><a href="#home">AMV</a></h1>
             </div>
             <ul class="flex">
-                <li class="mx-20 pt-12 font-semibold text-lg hover:scale-105 transition-all ease-in-out cursor-pointer hover:text-orange-500">About</li>
-                <li class="mx-20 pt-12 font-semibold text-lg hover:scale-105 transition-all ease-in-out cursor-pointer hover:text-orange-500">Anime List</li>
-                <li class="mx-20 pt-12 font-semibold text-lg hover:scale-105 transition-all ease-in-out cursor-pointer hover:text-orange-500">Community</li>
+                <li class="mx-20 pt-12 font-semibold text-lg hover:scale-105 transition-all ease-in-out cursor-pointer hover:text-orange-500"><a href="#About">About</a></li>
+                <li class="mx-20 pt-12 font-semibold text-lg hover:scale-105 transition-all ease-in-out cursor-pointer hover:text-orange-500"><a href="#list">Anime List</a></li>
+                <li class="mx-20 pt-12 font-semibold text-lg hover:scale-105 transition-all ease-in-out cursor-pointer hover:text-orange-500"><a href="community">Community</a></li>
             </ul>
         </nav>
 
-        <main class="flex">
+        <main class="flex" id="home">
             <!-- Left Section -->
             <div class="ls flex items-center justify-center w-1/2">
                 <img class="h-full w-auto " src="pic/1735484907330.png" alt="img">
@@ -43,7 +44,7 @@
             </div>
         </main>
 
-        <section class="min-h-screen">
+        <section class="min-h-screen" id="list">
             <div class="bg-[url('pic/card-bg.jpg')] bg-cover bg-no-repeat bg-center min-h-screen">
                 <div class="text-center my-14">
                     <h1 class="text-orange-500 font-bold text-6xl pt-9">Anime List</h1>
@@ -174,7 +175,7 @@
                   <button class="px-4 py-2 bg-gray-200 text-gray-600 rounded-md hover:bg-gray-300 transition">3</button>
                   <button class="px-4 py-2 bg-gray-200 text-gray-600 rounded-md hover:bg-gray-300 transition">4</button>
                   <button class="px-4 py-2 bg-gray-200 text-gray-600 rounded-md hover:bg-gray-300 transition">5</button>
-                  <button class="px-4 py-2 bg-gray-200 text-gray-600 rounded-md hover:bg-gray-300 transition">6</button>
+                 
               
                   <!-- Next Button -->
                   <button class="px-4 py-2 bg-gray-200 text-gray-600 rounded-md hover:bg-gray-300 transition">Next</button>
@@ -185,7 +186,7 @@
             </div>
         </section>
 
-        <footer class="bg-gray-800 text-gray-200 py-8">
+        <footer class="bg-gray-800 text-gray-200 py-8" id="About">
           <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
               <!-- Top Section -->
               <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
