@@ -12,6 +12,8 @@ html, body {
 
 
 
+
+
 @media(max-width: 1030px){
     #home{
         flex-direction: column-reverse;

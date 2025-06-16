@@ -3,286 +3,400 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Movies</title>
-    <link rel="stylesheet" href="main.css">
+    <title>AMV - Anime Movies & Videos</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
-<body>
-    <div class="bg-[url('img/1735481025315.jpg')] bg-cover bg-no-repeat bg-center overflow-x-hidden min-h-screen">
-      <nav class="relative">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div class="flex justify-between items-center h-24">
-            <div class="logo">
-              <h1 class="text-3xl font-extrabold text-amber-950">
-                <a href="#home">AMV</a>
-              </h1>
-            </div>
-      
-            <!-- Desktop Navigation -->
-            <ul class="hidden md:flex space-x-24">
-              <li>
-                <a href="#About" class="font-semibold text-lg hover:scale-105 transition-all ease-in-out hover:text-orange-500">
-                  About
-                </a>
-              </li>
-              <li>
-                <a href="#list" class="font-semibold text-lg hover:scale-105 transition-all ease-in-out hover:text-orange-500">
-                  Anime List
-                </a>
-              </li>
-              <li>
-                <a href="#community" class="font-semibold text-lg hover:scale-105 transition-all ease-in-out hover:text-orange-500">
-                  Community
-                </a>
-              </li>
-            </ul>
-      
-            <!-- Mobile Menu Icon -->
-            <div class="md:hidden">
-              <button id="menuButton" class="p-2 rounded-md font-bold text-gray-700 hover:text-orange-500 focus:outline-none">
-                <i id="menuIcon" class="h-6 w-6">☰</i>
-                <i id="closeIcon" class="h-6 w-6 hidden">×</i>
-              </button>
-            </div>
-          </div>
-        </div>
-      
-        <!-- Mobile Navigation (Initially hidden) -->
-        <div id="mobileMenu" class="md:hidden absolute top-24 left-0 right-0 bg-white shadow-lg z-50 hidden">
-          <ul class="px-4 pt-2 pb-4 space-y-2">
-            <li>
-              <a href="#About" class="block px-4 py-2 text-lg font-semibold hover:text-orange-500">About</a>
-            </li>
-            <li>
-              <a href="#list" class="block px-4 py-2 text-lg font-semibold hover:text-orange-500">Anime List</a>
-            </li>
-            <li>
-              <a href="#community" class="block px-4 py-2 text-lg font-semibold hover:text-orange-500">Community</a>
-            </li>
-          </ul>
-        </div>
-      </nav>
+<body class="overflow-x-hidden">
+    <!-- Hero Section with Background -->
+    <div class="bg-[url('img/1735481025315.jpg')] bg-cover bg-no-repeat bg-center bg-fixed min-h-screen">
+<!-- Navigation -->
+<nav class="fixed top-0 left-0 right-0 z-50 bg-white/20 backdrop-blur-sm  ">
+   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+       <div class="flex justify-between items-center h-20 lg:h-24">
+           <!-- Logo -->
+           <div class="logo">
+               <h1 class="text-2xl sm:text-3xl font-extrabold text-amber-900 drop-shadow-lg">
+                   <a href="#home" class="hover:text-orange-400 transition-colors">AMV</a>
+               </h1>
+           </div>
 
-        <main class="flex" id="home">
-            <!-- Left Section -->
-            <div class="ls flex items-center justify-center w-1/2 ">
-                <img class="h-full w-auto " src="img/1735484907330.png" alt="img">
-            </div>
-          
-            <!-- Right Section -->
-            <div class="rs flex flex-col items-center justify-center w-1/2 text-center">
-                <h1 class="text-orange-500 text-5xl font-bold mb-4">Welcome to AMV!</h1>
-                <p class="text-2xl mb-4 font-semibold">Watch and download trending anime shows.</p>
-                <button class="px-6 py-3 bg-orange-500 text-white rounded-lg hover:bg-orange-600 transition" >
-                    <a href="#list">Watch Now</a>
-                </button>
-            </div>
-        </main>
+           <!-- Desktop Navigation -->
+           <ul class="hidden md:flex space-x-6 lg:space-x-12 text-orange-500 ">
+               <li>
+                   <a href="#About" class="font-semibold text-base lg:text-lg hover:scale-105 transition-all ease-in-out hover:text-orange-400  drop-shadow">
+                       About
+                   </a>
+               </li>
+               <li>
+                   <a href="#list" class="font-semibold text-base lg:text-lg hover:scale-105 transition-all ease-in-out hover:text-orange-400  drop-shadow">
+                       Anime List
+                   </a>
+               </li>
+               <li>
+                   <a href="#community" class="font-semibold text-base lg:text-lg hover:scale-105 transition-all ease-in-out hover:text-orange-400  drop-shadow">
+                       Community
+                   </a>
+               </li>
+           </ul>
 
-        <section class="min-h-screen" id="list">
-            <div class="bg-[url('img/card-bg.jpg')] bg-cover bg-no-repeat bg-center min-h-screen">
-                <div class="text-center my-14">
-                    <h1 class="text-orange-500 font-bold text-6xl pt-9">Anime List</h1>
-                </div>
+           <!-- Mobile Menu Button -->
+           <div class="md:hidden">
+               <button id="menuButton" class="p-2 rounded-md text-2xl font-bold text-white hover:text-orange-400 focus:outline-none transition-colors drop-shadow">
+                   <i id="menuIcon" class="fas fa-bars"></i>
+                   <i id="closeIcon" class="fas fa-times hidden"></i>
+               </button>
+           </div>
+       </div>
+   </div>
 
-                <div class="cards grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8 max-w-7xl mx-auto p-4">
-                    <!-- Card -->
-                    <div class="rounded-xl overflow-hidden text-center text-2xl font-bold shadow-lg hover:scale-105 transition-all ease-in-out">
-                       <a href="https://archive.org/details/onepunchmanchapters8595">
-                      <div class="h-96 w-full overflow-hidden rounded-t-lg">
-                            <img src="img/Saitama Poster__ One Punch Man.jpeg" alt="img1" class="h-full w-full object-cover" />
-                        </div>
-                        <h1 class="p-4 text-black">One Punch Man</h1>
-                      </a>
-                    </div>
+   <!-- Mobile Navigation Menu -->
+   <div id="mobileMenu" class="md:hidden absolute top-20 left-0 right-0 bg-white/95 backdrop-blur-sm shadow-lg z-50 hidden">
+       <ul class="px-4 pt-2 pb-4 space-y-2">
+           <li>
+               <a href="#About" class="block px-4 py-3 text-lg font-semibold hover:text-orange-500 hover:bg-orange-50 rounded-md transition-all">About</a>
+           </li>
+           <li>
+               <a href="#list" class="block px-4 py-3 text-lg font-semibold hover:text-orange-500 hover:bg-orange-50 rounded-md transition-all">Anime List</a>
+           </li>
+           <li>
+               <a href="#community" class="block px-4 py-3 text-lg font-semibold hover:text-orange-500 hover:bg-orange-50 rounded-md transition-all">Community</a>
+           </li>
+       </ul>
+   </div>
+</nav>
 
-                    <!-- Additional Cards -->
-                    <div class="rounded-xl overflow-hidden text-center text-2xl font-bold shadow-lg hover:scale-105 transition-all ease-in-out">
-                        <div class="h-96 w-full overflow-hidden rounded-t-lg">
-                            <img src="img/Persona 3 Reload _ Poster.jpeg" alt="img2" class="h-full w-full object-cover" />
-                        </div>
-                        <h1 class="p-4 text-black">Persona</h1>
-                    </div>
-
-                    <div class="rounded-xl overflow-hidden text-center text-2xl font-bold shadow-lg hover:scale-105 transition-all ease-in-out">
-                        <div class="h-96 w-full overflow-hidden rounded-t-lg">
-                            <img src="img/Affiche métal DragonBall Z.jpeg" alt="img2" class="h-full w-full object-cover" />
-                        </div>
-                        <h1 class="p-4 text-black">DragonBall Z</h1>
-                    </div>
-
-                    <div class="rounded-xl overflow-hidden text-center text-2xl font-bold shadow-lg hover:scale-105 transition-all ease-in-out">
-                        <div class="h-96 w-full overflow-hidden rounded-t-lg">
-                            <img src="img/Death Note.jpeg" alt="img2" class="h-full w-full object-cover" />
-                        </div>
-                        <h1 class="p-4 text-black">Death Note</h1>
-                    </div>
-
-                    <div class="rounded-xl overflow-hidden text-center text-2xl font-bold shadow-lg hover:scale-105 transition-all ease-in-out">
-                        <div class="h-96 w-full overflow-hidden rounded-t-lg">
-                            <img src="img/Windbreaker (Anime).jpeg" class="h-full w-full object-cover" />
-                        </div>
-                        <h1 class="p-4 text-black">Wind Breaker</h1>
-                    </div>
-
-                    <div class="rounded-xl overflow-hidden text-center text-2xl font-bold shadow-lg hover:scale-105 transition-all ease-in-out">
-                        <div class="h-96 w-full overflow-hidden rounded-t-lg">
-                            <img src="img/Jutsu kaisen lover !!!!_ GATHER HER IN THE COMMENTS NOW !!!.jpeg" class="h-full w-full object-cover" />
-                        </div>
-                        <h1 class="p-4 text-black">Ju Jutsu Kaisen</h1>
-                    </div>
-
-                    
-              <div class=" rounded-xl overflow-hidden text-center text-2xl font-bold shadow-lg hover:scale-105 transition-all ease-in-out">
-                <div class="h-96 w-full overflow-hidden rounded-t-lg">
-                  <img
-                    src="img/e76d204e-f9e5-490c-b80a-2ff4b242a5ca.jpeg" 
-                    class="h-full w-full object-cover"
-                  />
-                </div>
-                <h1 class="p-4 text-black">One Piece</h1>
-              </div>
-
-              <div class=" rounded-xl overflow-hidden text-center text-2xl font-bold shadow-lg hover:scale-105 transition-all ease-in-out">
-                <div class="h-96 w-full overflow-hidden rounded-t-lg">
-                  <img
-                    src="img/Season 2 Key Visual 1 _ October 7 Premiere.jpeg" 
-                    class="h-full w-full object-cover"
-                  />
-                </div>
-                <h1 class="p-4 text-black">Spy X Family</h1>
-              </div>
-
-              <div class=" rounded-xl overflow-hidden text-center text-2xl font-bold shadow-lg hover:scale-105 transition-all ease-in-out">
-                <div class="h-96 w-full overflow-hidden rounded-t-lg">
-                  <img
-                    src="img/download.jpeg" 
-                    class="h-full w-full object-cover"
-                  />
-                </div>
-                <h1 class="p-4 text-black">Naruto</h1>
-              </div>
-
-              <div class=" rounded-xl overflow-hidden text-center text-2xl font-bold shadow-lg hover:scale-105 transition-all ease-in-out">
-                <div class="h-96 w-full overflow-hidden rounded-t-lg">
-                  <img
-                    src="img/TOKYO REVENGERS 2.jpeg" 
-                    class="h-full w-full object-cover"
-                  />
-                </div>
-                <h1 class="p-4 text-black">Tokyo Revengers</h1>
-              </div>
-
-              <div class=" rounded-xl overflow-hidden text-center text-2xl font-bold shadow-lg hover:scale-105 transition-all ease-in-out">
-                <div class="h-96 w-full overflow-hidden rounded-t-lg">
-                  <img
-                    src="img/Kaguya-Sama _Love Is War_ Poster made by me.jpeg" 
-                    class="h-full w-full object-cover"
-                  />
-                </div>
-                <h1 class="p-4 text-black">Kaguya-Sama</h1>
-              </div>
-
-              <div class=" rounded-xl overflow-hidden text-center text-2xl font-bold shadow-lg hover:scale-105 transition-all ease-in-out">
-                <div class="h-96 w-full overflow-hidden rounded-t-lg">
-                  <img
-                    src="img/download (1).jpeg" 
-                    class="h-full w-full object-cover"
-                  />
-                </div>
-                <h1 class="p-4 text-black">Darling in the Franxx</h1>
-              </div>
-           
-  
-                        <!--cards-->
-
-                    
-                </div>
-
-
-                <div class="flex justify-center items-center space-x-2 mt-6 mb-6">
-                  <!-- Previous Button -->
-                  <button class="px-4 py-2 bg-gray-200 text-gray-600 rounded-md hover:bg-gray-300 transition">Previous</button>
-              
-                  
-                  <button class="px-4 py-2 bg-orange-500 text-white rounded-md font-bold">1</button>
-                  <a href="page2.html"><button class="px-4 py-2 bg-gray-200 text-gray-600 rounded-md hover:bg-gray-300 transition">2</button></a>
-                  <button class="px-4 py-2 bg-gray-200 text-gray-600 rounded-md hover:bg-gray-300 transition">3</button>
-                  <button class="px-4 py-2 bg-gray-200 text-gray-600 rounded-md hover:bg-gray-300 transition">4</button>
-                  <button class="px-4 py-2 bg-gray-200 text-gray-600 rounded-md hover:bg-gray-300 transition">5</button>
-                 
-              
-                  <!-- Next Button -->
-                  <button class="px-4 py-2 bg-gray-200 text-gray-600 rounded-md hover:bg-gray-300 transition">Next</button>
-              </div>
-              
-
-                
-            </div>
-        </section>
-
-        <footer class="bg-gray-800 text-gray-200 py-8" id="About">
-          <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-              <!-- Top Section -->
-              <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                  <!-- About Section -->
-                  <div>
-                      <h3 class="text-lg font-bold mb-4 text-orange-500">About Us</h3>
-                      <p class="text-sm">
-                          AMV is your one-stop platform to stream and download the latest and trending anime shows. Explore our curated library and join our community of anime enthusiasts.
-                      </p>
-                  </div>
-      
-                  <!-- Links Section -->
-                  <div>
-                      <h3 class="text-lg font-bold mb-4 text-orange-500">Quick Links</h3>
-                      <ul class="space-y-2 text-sm">
-                          <li><a href="#" class="hover:text-orange-400 transition">Home</a></li>
-                          <li><a href="#" class="hover:text-orange-400 transition">Anime List</a></li>
-                          <li><a href="#" class="hover:text-orange-400 transition">Community</a></li>
-                          <li><a href="#" class="hover:text-orange-400 transition">Contact Us</a></li>
-                      </ul>
-                  </div>
-      
-                  <!-- Newsletter Section -->
-                  <div>
-                      <h3 class="text-lg font-bold mb-4 text-orange-500">Subscribe to Our Newsletter</h3>
-                      <p class="text-sm mb-4">
-                          Stay updated with the latest releases and news. Subscribe to our newsletter!
-                      </p>
-                      <form class="flex flex-col sm:flex-row items-center sm:space-x-2">
-                          <input 
-                              type="email" 
-                              placeholder="Enter your email" 
-                              class="w-full sm:w-auto flex-grow px-4 py-2 text-gray-800 rounded-md mb-2 sm:mb-0"
-                          />
-                          <button 
-                              type="submit" 
-                              class="bg-orange-500 text-white px-4 py-2 rounded-md hover:bg-orange-600 transition">
-                              Subscribe
-                          </button>
-                      </form>
-                  </div>
-              </div>
-      
-              <!-- Divider -->
-              <div class="border-t border-gray-700 mt-8"></div>
-      
-              <!-- Bottom Section -->
-              <div class="flex flex-col sm:flex-row justify-between items-center mt-4">
-                  <p class="text-sm">&copy; 2025 AMV. All rights reserved.</p>
-                  <div class="flex space-x-4 mt-4 sm:mt-0">
-                      <a href="#" class="text-gray-400 hover:text-gray-200"><i class="fab fa-facebook"></i> Facebook</a>
-                      <a href="#" class="text-gray-400 hover:text-gray-200"><i class="fab fa-twitter"></i> Twitter</a>
-                      <a href="#" class="text-gray-400 hover:text-gray-200"><i class="fab fa-instagram"></i> Instagram</a>
-                  </div>
-              </div>
-          </div>
-      </footer>
-      
-        
+ <!-- Hero Content -->
+<main class="flex flex-col lg:flex-row min-h-screen pt-20 lg:pt-24" id="home">
+    <!-- Left Section - Image -->
+    <div class="w-full lg:w-1/2 h-64 lg:h-auto relative overflow-hidden">
+        <img class="absolute inset-0 w-full h-full object-cover" src="img/1735484907330.png" alt="AMV Hero Image">
     </div>
 
+    <!-- Right Section - Text Content -->
+    <div class="flex flex-col items-center justify-center w-full lg:w-1/2 text-center p-8 lg:p-12 ">
+        <h1 class="text-orange-500 text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-bold mb-4 lg:mb-6 leading-tight">
+            Welcome to AMV!
+        </h1>
+        <p class="text-lg sm:text-xl lg:text-2xl mb-6 lg:mb-8 font-semibold text-gray-800 max-w-lg">
+            Watch and download trending anime shows.
+        </p>
+        <button class="px-6 py-3 lg:px-8 lg:py-4 bg-orange-500 text-white rounded-lg hover:bg-orange-600 transition-all duration-300 font-semibold text-lg hover:scale-105 shadow-lg">
+            <a href="#list" class="block w-full h-full">Watch Now</a>
+        </button>
+    </div>
+</main>
+    </div>
 
-    <script src="script.js"></script>
+    <!-- Anime List Section -->
+    <section class="min-h-screen bg-gray-50" id="list">
+        <div class="bg-[url('img/card-bg.jpg')] bg-cover bg-no-repeat bg-center bg-fixed min-h-screen">
+            <!-- Section Header -->
+            <div class="text-center py-12 lg:py-16">
+                <h1 class="text-orange-500 font-bold text-4xl sm:text-5xl lg:text-6xl">Anime List</h1>
+                <p class="text-gray-700 text-lg mt-4 max-w-2xl mx-auto px-4">
+                    Discover your next favorite anime from our curated collection
+                </p>
+            </div>
+
+            <!-- Cards Grid -->
+            <div class="cards grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 lg:gap-8 max-w-7xl mx-auto px-4 pb-12">
+                <!-- Card Template -->
+                <div class="bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-2xl hover:scale-105 transition-all duration-300 ease-in-out group">
+                    <a href="https://archive.org/details/onepunchmanchapters8595" class="block">
+                        <div class="h-80 lg:h-96 w-full overflow-hidden">
+                            <img src="img/Saitama Poster__ One Punch Man.jpeg" alt="One Punch Man" class="h-full w-full object-cover group-hover:scale-110 transition-transform duration-300" />
+                        </div>
+                        <div class="p-4">
+                            <h3 class="text-xl lg:text-2xl font-bold text-gray-800 group-hover:text-orange-500 transition-colors">One Punch Man</h3>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-2xl hover:scale-105 transition-all duration-300 ease-in-out group">
+                    <a href="#" class="block">
+                        <div class="h-80 lg:h-96 w-full overflow-hidden">
+                            <img src="img/Persona 3 Reload _ Poster.jpeg" alt="Persona" class="h-full w-full object-cover group-hover:scale-110 transition-transform duration-300" />
+                        </div>
+                        <div class="p-4">
+                            <h3 class="text-xl lg:text-2xl font-bold text-gray-800 group-hover:text-orange-500 transition-colors">Persona</h3>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-2xl hover:scale-105 transition-all duration-300 ease-in-out group">
+                    <a href="#" class="block">
+                        <div class="h-80 lg:h-96 w-full overflow-hidden">
+                            <img src="img/Affiche métal DragonBall Z.jpeg" alt="DragonBall Z" class="h-full w-full object-cover group-hover:scale-110 transition-transform duration-300" />
+                        </div>
+                        <div class="p-4">
+                            <h3 class="text-xl lg:text-2xl font-bold text-gray-800 group-hover:text-orange-500 transition-colors">DragonBall Z</h3>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-2xl hover:scale-105 transition-all duration-300 ease-in-out group">
+                    <a href="#" class="block">
+                        <div class="h-80 lg:h-96 w-full overflow-hidden">
+                            <img src="img/Death Note.jpeg" alt="Death Note" class="h-full w-full object-cover group-hover:scale-110 transition-transform duration-300" />
+                        </div>
+                        <div class="p-4">
+                            <h3 class="text-xl lg:text-2xl font-bold text-gray-800 group-hover:text-orange-500 transition-colors">Death Note</h3>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-2xl hover:scale-105 transition-all duration-300 ease-in-out group">
+                    <a href="#" class="block">
+                        <div class="h-80 lg:h-96 w-full overflow-hidden">
+                            <img src="img/Windbreaker (Anime).jpeg" alt="Wind Breaker" class="h-full w-full object-cover group-hover:scale-110 transition-transform duration-300" />
+                        </div>
+                        <div class="p-4">
+                            <h3 class="text-xl lg:text-2xl font-bold text-gray-800 group-hover:text-orange-500 transition-colors">Wind Breaker</h3>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-2xl hover:scale-105 transition-all duration-300 ease-in-out group">
+                    <a href="#" class="block">
+                        <div class="h-80 lg:h-96 w-full overflow-hidden">
+                            <img src="img/Jutsu kaisen lover !!!!_ GATHER HER IN THE COMMENTS NOW !!!.jpeg" alt="Jujutsu Kaisen" class="h-full w-full object-cover group-hover:scale-110 transition-transform duration-300" />
+                        </div>
+                        <div class="p-4">
+                            <h3 class="text-xl lg:text-2xl font-bold text-gray-800 group-hover:text-orange-500 transition-colors">Jujutsu Kaisen</h3>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-2xl hover:scale-105 transition-all duration-300 ease-in-out group">
+                    <a href="#" class="block">
+                        <div class="h-80 lg:h-96 w-full overflow-hidden">
+                            <img src="img/e76d204e-f9e5-490c-b80a-2ff4b242a5ca.jpeg" alt="One Piece" class="h-full w-full object-cover group-hover:scale-110 transition-transform duration-300" />
+                        </div>
+                        <div class="p-4">
+                            <h3 class="text-xl lg:text-2xl font-bold text-gray-800 group-hover:text-orange-500 transition-colors">One Piece</h3>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-2xl hover:scale-105 transition-all duration-300 ease-in-out group">
+                    <a href="#" class="block">
+                        <div class="h-80 lg:h-96 w-full overflow-hidden">
+                            <img src="img/Season 2 Key Visual 1 _ October 7 Premiere.jpeg" alt="Spy X Family" class="h-full w-full object-cover group-hover:scale-110 transition-transform duration-300" />
+                        </div>
+                        <div class="p-4">
+                            <h3 class="text-xl lg:text-2xl font-bold text-gray-800 group-hover:text-orange-500 transition-colors">Spy X Family</h3>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-2xl hover:scale-105 transition-all duration-300 ease-in-out group">
+                    <a href="#" class="block">
+                        <div class="h-80 lg:h-96 w-full overflow-hidden">
+                            <img src="img/download.jpeg" alt="Naruto" class="h-full w-full object-cover group-hover:scale-110 transition-transform duration-300" />
+                        </div>
+                        <div class="p-4">
+                            <h3 class="text-xl lg:text-2xl font-bold text-gray-800 group-hover:text-orange-500 transition-colors">Naruto</h3>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-2xl hover:scale-105 transition-all duration-300 ease-in-out group">
+                    <a href="#" class="block">
+                        <div class="h-80 lg:h-96 w-full overflow-hidden">
+                            <img src="img/TOKYO REVENGERS 2.jpeg" alt="Tokyo Revengers" class="h-full w-full object-cover group-hover:scale-110 transition-transform duration-300" />
+                        </div>
+                        <div class="p-4">
+                            <h3 class="text-xl lg:text-2xl font-bold text-gray-800 group-hover:text-orange-500 transition-colors">Tokyo Revengers</h3>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-2xl hover:scale-105 transition-all duration-300 ease-in-out group">
+                    <a href="#" class="block">
+                        <div class="h-80 lg:h-96 w-full overflow-hidden">
+                            <img src="img/Kaguya-Sama _Love Is War_ Poster made by me.jpeg" alt="Kaguya-Sama" class="h-full w-full object-cover group-hover:scale-110 transition-transform duration-300" />
+                        </div>
+                        <div class="p-4">
+                            <h3 class="text-xl lg:text-2xl font-bold text-gray-800 group-hover:text-orange-500 transition-colors">Kaguya-Sama</h3>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-2xl hover:scale-105 transition-all duration-300 ease-in-out group">
+                    <a href="#" class="block">
+                        <div class="h-80 lg:h-96 w-full overflow-hidden">
+                            <img src="img/download (1).jpeg" alt="Darling in the Franxx" class="h-full w-full object-cover group-hover:scale-110 transition-transform duration-300" />
+                        </div>
+                        <div class="p-4">
+                            <h3 class="text-xl lg:text-2xl font-bold text-gray-800 group-hover:text-orange-500 transition-colors">Darling in the Franxx</h3>
+                        </div>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Enhanced Pagination -->
+            <div class="flex flex-col sm:flex-row justify-center items-center space-y-4 sm:space-y-0 sm:space-x-2 py-8 px-4">
+                <!-- Page Info -->
+                <div class="text-gray-600 text-sm mb-2 sm:mb-0 sm:mr-4">
+                    Showing 1-12 of 50 results
+                </div>
+                
+                <!-- Pagination Controls -->
+                <div class="flex items-center space-x-1">
+                    <!-- Previous Button -->
+                    <button class="px-3 py-2 bg-gray-200 text-gray-400 rounded-md cursor-not-allowed" disabled>
+                        <i class="fas fa-chevron-left"></i>
+                    </button>
+                    
+                    <!-- Page Numbers -->
+                    <button class="px-4 py-2 bg-orange-500 text-white rounded-md font-bold shadow-md">1</button>
+                    <a href="page2.html">
+                        <button class="px-4 py-2 bg-white text-gray-600 rounded-md hover:bg-gray-50 transition-colors shadow-sm border">2</button>
+                    </a>
+                    <button class="px-4 py-2 bg-white text-gray-600 rounded-md hover:bg-gray-50 transition-colors shadow-sm border">3</button>
+                    <button class="px-4 py-2 bg-white text-gray-600 rounded-md hover:bg-gray-50 transition-colors shadow-sm border">4</button>
+                    <button class="px-4 py-2 bg-white text-gray-600 rounded-md hover:bg-gray-50 transition-colors shadow-sm border">5</button>
+                    
+                    <!-- Ellipsis -->
+                    <span class="px-2 text-gray-500">...</span>
+                    <button class="px-4 py-2 bg-white text-gray-600 rounded-md hover:bg-gray-50 transition-colors shadow-sm border">10</button>
+                    
+                    <!-- Next Button -->
+                    <button class="px-3 py-2 bg-white text-gray-600 rounded-md hover:bg-gray-50 transition-colors shadow-sm border">
+                        <i class="fas fa-chevron-right"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-gray-200 py-12" id="About">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <!-- Top Section -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 lg:gap-12">
+                <!-- About Section -->
+                <div>
+                    <h3 class="text-xl font-bold mb-4 text-orange-500">About AMV</h3>
+                    <p class="text-gray-300 leading-relaxed">
+                        AMV is your ultimate destination for streaming and downloading the latest trending anime shows. 
+                        Explore our carefully curated library and join our passionate community of anime enthusiasts from around the world.
+                    </p>
+                    <div class="mt-4 flex space-x-4">
+                        <a href="#" class="text-gray-400 hover:text-orange-400 transition-colors">
+                            <i class="fab fa-facebook text-xl"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-orange-400 transition-colors">
+                            <i class="fab fa-twitter text-xl"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-orange-400 transition-colors">
+                            <i class="fab fa-instagram text-xl"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-orange-400 transition-colors">
+                            <i class="fab fa-youtube text-xl"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Quick Links -->
+                <div>
+                    <h3 class="text-xl font-bold mb-4 text-orange-500">Quick Links</h3>
+                    <ul class="space-y-3">
+                        <li><a href="#home" class="text-gray-300 hover:text-orange-400 transition-colors flex items-center"><i class="fas fa-home mr-2"></i>Home</a></li>
+                        <li><a href="#list" class="text-gray-300 hover:text-orange-400 transition-colors flex items-center"><i class="fas fa-list mr-2"></i>Anime List</a></li>
+                        <li><a href="#community" class="text-gray-300 hover:text-orange-400 transition-colors flex items-center"><i class="fas fa-users mr-2"></i>Community</a></li>
+                        <li><a href="#" class="text-gray-300 hover:text-orange-400 transition-colors flex items-center"><i class="fas fa-envelope mr-2"></i>Contact Us</a></li>
+                        <li><a href="#" class="text-gray-300 hover:text-orange-400 transition-colors flex items-center"><i class="fas fa-shield-alt mr-2"></i>Privacy Policy</a></li>
+                    </ul>
+                </div>
+
+                <!-- Newsletter Section -->
+                <div>
+                    <h3 class="text-xl font-bold mb-4 text-orange-500">Stay Updated</h3>
+                    <p class="text-gray-300 mb-4 leading-relaxed">
+                        Subscribe to our newsletter and never miss the latest anime releases, updates, and exclusive content!
+                    </p>
+                    <form class="space-y-3">
+                        <input 
+                            type="email" 
+                            placeholder="Enter your email address" 
+                            class="w-full px-4 py-3 bg-gray-800 text-gray-200 border border-gray-700 rounded-md focus:outline-none focus:border-orange-500 transition-colors"
+                            required
+                        />
+                        <button 
+                            type="submit" 
+                            class="w-full bg-orange-500 text-white px-4 py-3 rounded-md hover:bg-orange-600 transition-colors font-semibold">
+                            Subscribe Now
+                        </button>
+                    </form>
+                </div>
+            </div>
+
+            <!-- Divider -->
+            <div class="border-t border-gray-800 mt-12 pt-8">
+                <!-- Bottom Section -->
+                <div class="flex flex-col sm:flex-row justify-between items-center space-y-4 sm:space-y-0">
+                    <p class="text-gray-400 text-sm">
+                        &copy; 2025 AMV - Anime Movies & Videos. 
+                    </p>
+                    <div class="flex items-center space-x-6 text-sm">
+                        <a href="#" class="text-gray-400 hover:text-gray-200 transition-colors">Terms of Service</a>
+                        <a href="#" class="text-gray-400 hover:text-gray-200 transition-colors">Privacy Policy</a>
+                        <a href="#" class="text-gray-400 hover:text-gray-200 transition-colors">Support</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle functionality
+        const menuButton = document.getElementById('menuButton');
+        const mobileMenu = document.getElementById('mobileMenu');
+        const menuIcon = document.getElementById('menuIcon');
+        const closeIcon = document.getElementById('closeIcon');
+
+        menuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+            menuIcon.classList.toggle('hidden');
+            closeIcon.classList.toggle('hidden');
+        });
+
+        // Close mobile menu when clicking on links
+        const mobileLinks = mobileMenu.querySelectorAll('a');
+        mobileLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+                menuIcon.classList.remove('hidden');
+                closeIcon.classList.add('hidden');
+            });
+        });
+
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Newsletter form submission
+        const newsletterForm = document.querySelector('footer form');
+        newsletterForm.addEventListener('submit', function(e) {
+            e.preventDefault();
+            const email = this.querySelector('input[type="email"]').value;
+            if (email) {
+                alert('Thank you for subscribing! We\'ll keep you updated with the latest anime content.');
+                this.reset();
+            }
+        });
+    </script>
 </body>
 </html>
