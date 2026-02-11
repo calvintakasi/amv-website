@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AMV • Anime Detail</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700;900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="detail.css" />
+  </head>
+  <body class="detail-bg min-h-screen text-slate-100">
+    <div class="pointer-events-none fixed inset-0 -z-10 overflow-hidden">
+      <div
+        class="absolute -top-44 left-8 h-96 w-96 rounded-full bg-fuchsia-500/20 blur-[100px]"
+      ></div>
+      <div
+        class="absolute top-1/3 -right-20 h-[30rem] w-[30rem] rounded-full bg-cyan-500/10 blur-[100px]"
+      ></div>
+    </div>
+
+    <header
+      class="sticky top-0 z-50 border-b border-white/10 bg-[#070b16]/80 backdrop-blur-xl"
+    >
+      <nav
+        class="mx-auto flex max-w-7xl items-center justify-between px-4 py-4 sm:px-6 lg:px-8"
+      >
+        <a href="index.html" class="inline-flex items-center gap-3">
+          <span
+            class="inline-flex h-10 w-10 items-center justify-center rounded-xl bg-gradient-to-br from-fuchsia-600 to-orange-500"
+            ><i class="fa-solid fa-film"></i
+          ></span>
+          <div>
+            <p class="text-lg font-black">AMV</p>
+            <p class="text-[10px] uppercase tracking-[0.2em] text-slate-400">
+              Detail Mode
+            </p>
+          </div>
+        </a>
+        <a
+          href="index.html#explore"
+          class="rounded-lg border border-white/20 px-4 py-2 text-sm font-bold hover:border-cyan-300 hover:text-cyan-300"
+          >← Back to Explore</a
+        >
+      </nav>
+    </header>
+
+    <main
+      id="animeDetail"
+      class="mx-auto max-w-7xl px-4 pb-16 pt-10 sm:px-6 lg:px-8"
+    ></main>
+
+    <script type="module" src="detail.js"></script>
+  </body>
+</html>

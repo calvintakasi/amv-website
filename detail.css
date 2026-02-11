@@ -1,0 +1,16 @@
+body {
+  font-family: "Outfit", sans-serif;
+}
+
+.detail-bg {
+  background:
+    radial-gradient(circle at 20% 5%, rgba(193, 64, 255, 0.18), transparent 30%),
+    radial-gradient(circle at 90% 20%, rgba(34, 211, 238, 0.12), transparent 35%),
+    #070b16;
+}
+
+.poster-glow {
+  box-shadow:
+    0 0 40px rgba(217, 70, 239, 0.2),
+    0 0 80px rgba(251, 146, 60, 0.12);
+}
